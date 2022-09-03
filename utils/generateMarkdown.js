@@ -1,8 +1,11 @@
+// Requires the FS package.
 const fs = require('fs');
+// Requires the Inquirer package.
 const inquirer = require('inquirer');
+// Requires the index.js file.
 const index = require('../index.js')
 
-
+// Fuction to render the License Badge.
 function renderLicenseBadge(license) {
   let badge = '';
   if (license === 'MIT') {
@@ -17,7 +20,7 @@ function renderLicenseBadge(license) {
   return badge;
 };
 
-
+// Function to render the License Link.
 function renderLicenseLink(license) {
   let licenseLink = '';
   if (license === 'MIT') {
@@ -32,7 +35,7 @@ function renderLicenseLink(license) {
   return licenseLink;
 }
 
-
+// Function to render the Licese Section.
 function renderLicenseSection(license) {
   let licenseSection = ''
   if (license === 'None') {

@@ -1,8 +1,11 @@
+// Requires the FS package.
 const fs = require("fs");
+// Requires the Inquirer package.
 const inquirer = require("inquirer");
+// Requires 'generateMarkDown' file from the 'utils' folder.
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
-
+// The template literal for the ReadMe file being generated.
 const generateReadMe = ({ title, license, description, installation, tools, usage, contribute, github, email, reach }) => {
     return ` 
     Title: 
@@ -37,6 +40,7 @@ const generateReadMe = ({ title, license, description, installation, tools, usag
     `
 }
 
+// The questions asked to the user.
 inquirer.prompt([
     {
         name: "title",
